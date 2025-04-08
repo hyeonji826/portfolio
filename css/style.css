@@ -86,6 +86,9 @@ button:focus {
   align-items: center;
   z-index: 1;
 }
+.ico {
+  width: 35px;
+}
 .header__logo {
   display: flex;
   align-items: center;
