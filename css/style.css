@@ -1,6 +1,112 @@
 @font-face {
-    font-family: 'CookieRun-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "CookieRun-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global 변수 */
+:root {
+  --color-primary: var(--color-black);
+  --color-primary-variant: var(--color-gray);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-orange);
+  --color-text: var(--color-white);
+  /* colors */
+  --color-white: #fff;
+  --color-black: #050a13;
+  --color-blue: #03e8f9;
+  --color-orange: #fd6413;
+  --color-gray: #1b1e26;
+  /* size */
+  --size-max-width: 1200px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "GmarketSansMedium";
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+button {
+  background-color: transparent; /* 요소의 배경색을 투명하게 설정 */
+  outline: 0;
+  border: 0;
+}
+button:focus {
+  outline: 1px solid var(--color-accent);
+}
+.section {
+  padding: 4rem;
+  text-align: center;
+}
+.max-container {
+  max-width: var(--size-max-width);
+  margin: auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.description {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+/* header */
+.header {
+  background-color: var(--color-primary-variant);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.header__logo__img {
+    width: 36px;
+    height: 36px;
+}
+.header__logo__title{
+    font-size: 1.8rem;
+}
+
+.header__menu {
+    display: flex;
+    gap: 4px;
+}
+.header__menu__item {
+    padding: 8px 16px;
+}
+.header__menu__item:hover {
+    border-bottom: 1px solid var(--color-accent);
+}
+.header__menu__item:active {
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
 }
