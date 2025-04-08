@@ -28,16 +28,16 @@
     <header class="header">
       <div class="header__logo">
         <img class="ico" .header__logo__img src="./images/portfolio(2).ico" alt="Logo" />
-        <h1 class="header__logo__title"><a href="#home">노현지</a></h1>
+        <h1 class="header__logo__title"><a href="#home">Hyeonji-Noh</a></h1>
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li><a href="#home" class="header__menu__item active">홈으로</a></li>
-          <li><a href="#about" class="header__menu__item">Hyeonji</a></li>
-          <li><a href="#skill"class="header__menu__item">기술</a></li>
-          <li><a href="#work"class="header__menu__item">포트폴리오</a></li>
-          <li><a href="#license"class="header__menu__item">자격증</a></li>
-          <li><a href="#contact"class="header__menu__item">연락처</a></li>
+          <li><a href="#home" class="header__menu__item active">Home</a></li>
+          <li><a href="#about" class="header__menu__item">Introduce</a></li>
+          <li><a href="#skills"class="header__menu__item">Skill</a></li>
+          <li><a href="#work"class="header__menu__item">Work</a></li>
+          <li><a href="#license"class="header__menu__item">License</a></li>
+          <li><a href="#contact"class="header__menu__item">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -47,14 +47,14 @@
       <!-- home 시작-->
       <section id="home">
         <img class="home__avatar" src="./images/portfolio (2).png" alt="My Logo" />
-        <h2 class="home__title">안녕하세요. <br /><strong class="home__title--string">노현지</strong>입니다.</h2>
-        <p class="home__description">세상에서 가장 뛰어난 AI 개발자 현지입니다.</p>
-        <a class="home__contact" href="#contact">연락처</a>
+        <h2 class="home__title">Hello,I'm <br /><strong class="home__title--string">Hyeonji-Noh</strong></h2>
+        <p class="home__description">AI 의료계 소프트웨어 개발자. </p>
+        <a class="home__contact" href="#contact">Contact</a>
       </section>
       <!--  home 끝 -->
       <!-- about 시작-->
       <section id="about" class="section max-container">
-        <h2 class="title">현지</h2>
+        <h2 class="title">Hyeonji-Noh</h2>
         <p class="description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
           eligendi officia, accusamus, ullam reprehenderit ea corrupti
@@ -66,21 +66,21 @@
         </p>
         <ul class="skills">
           <li class="skill">
-            <i class="fa-brands fa-html5 skill__icon"></i>
-              <p class="skill_title">Front-end</p>
-              <p>HTML, CSS, Javascript, Node.Js, React</p>
+            <i class="fa-solid fa-laptop-code skill__icon"></i>
+              <p class="skill__title">Front-end</p>
+              <p class="skill__skill">HTML, CSS, Javascript, Node.Js, React</p>
             
           </li>
           <li class="skill">
-            <i class="fa-solid fa-mobile skill__icon"></i>
-              <p class="skill_title">Mobile</p>
-              <p>Android, IOS, Kotlin, React-Native</p>
+            <i class="fa-solid fa-mobile-screen-button skill__icon" ></i>
+              <p class="skill__title">Mobile</p>
+              <p class="skill__skill">Android, IOS, Kotlin, React-Native</p>
             
           </li>
           <li class="skill">
-            <i class="fa-solid fa-mobile skill__icon"></i>
-              <p class="skill_title">AI</p>
-              <p>Tensorflow, Python, Pytorch, Numpy</p>
+            <i class="fa-solid fa-robot skill__icon"></i>
+              <p class="skill__title">AI</p>
+              <p class="skill__skill">Tensorflow, Python, Pytorch, Numpy</p>
             
           </li>
         </ul>
@@ -88,20 +88,21 @@
         <ul class="jobs">
           <li class="job">
             <img class="job__img"
-              src="./images/2530796_general_hierachy_map_office_site_icon.png"
-              alt="Microsoft Logo"
-            />
+            src="./images/dankook.png" alt="Chemical Logo" />
             <div>
-              <p class="job__name">마이크로소프트 엔지니어</p>
-              <p class="job__period">2025.04.01~</p>
+              <p class="job__name">단국대학교 화학공학과 졸업</p>
+              <p class="job__period">2022.03 ~ 2025.03</p>
+              <p class="job__project">졸업논문 :<a href="https://hyeonji826.tistory.com/38"   target="_blank" class="job__projects">바이오가스 조성별 이산화탄소 농도</a> </p>
             </div>
           </li>
           <li class="job">
             <img class="job__img"
-            src="./images/chemical.png" alt="Chemical Logo" />
+              src="./images/microsoft.png"
+              alt="Microsoft Logo"
+            />
             <div>
-              <p class="job__name">화학공학과 엔지니어</p>
-              <p class="job__period">2022~</p>
+              <p class="job__name">마이크로소프트 엔지니어</p>
+              <p class="job__period">2028.04.01~</p>
             </div>
           </li>
         </ul>
@@ -157,22 +158,22 @@
 
           <section class="tools__tools">
             <h3 class="tools__title">도구</h3>
-            <ul>
+            <dl>
               <li>Visual Studio Code</li>
               <li>IntelliJ</li>
               <li>Colab</li>
               <li>Jupyter</li>
               <li>Xcode</li>
-            </ul>
+            </dl>
           </section>
 
           <section class="tools__etc">
             <h3 class="tools__title">기타</h3>
-            <ul>
+            <dl>
               <li>Git</li>
               <li>SLACK</li>
               <li>Math</li>
-            </ul>
+            </dl>
           </section>
         </div> </div>
       </section>
@@ -180,34 +181,34 @@
 
       <!-- work 시작 -->
       <section id="work">
-        <h2>포트폴리오</h2>
-        <p>Projects</p>
-        <ul>
-          <li>
-            <button>ALL <span>10</span></button>
+        <h2 class="work__title">포트폴리오</h2>
+        <p class="work__titles">Projects</p>
+        <ul id="works">
+          <li class="works">
+            <button class="works" >ALL <span>10</span></button>
           </li>
-          <li>
-            <button>Front-end <span>3</span></button>
+          <li class="works">
+            <button class="works" >Front-end <span>3</span></button>
           </li>
-          <li>
-            <button>Mobile <span>3</span></button>
+          <li class="works">
+            <button class="works">Mobile <span>3</span></button>
           </li>
-          <li>
-            <button>AI <span>4</span></button>
+          <li class="works">
+            <button class="works">AI <span>4</span></button>
           </li>
         </ul>
-        <ul>
-          <li>
+        <ul class="projects">
+          <li class="projects__etc" >
             <!-- target="_blank" : 새창이 열림 -->
             <a href="#" target="_blank"
               ><img src="./images/project.png" alt="project 이미지"
             /></a>
-            <div>
+            <div >
               <h3>Project #1</h3>
               <p>프로젝트 설명</p>
             </div>
           </li>
-          <li>
+          <li class="projects__etc">
             <a href="#" target="_blank"
               ><img src="./images/project.png" alt="project 이미지"
             /></a>
@@ -216,7 +217,7 @@
               <p>프로젝트 설명</p>
             </div>
           </li>
-          <li>
+          <li class="projects__etc">
             <a href="#" target="_blank"
               ><img src="./images/project.png" alt="project 이미지"
             /></a>
@@ -225,7 +226,7 @@
               <p>프로젝트 설명</p>
             </div>
           </li>
-          <li>
+          <li class="projects__etc">
             <a href="#" target="_blank"
               ><img src="./images/project.png" alt="project 이미지"
             /></a>
@@ -234,7 +235,7 @@
               <p>프로젝트 설명</p>
             </div>
           </li>
-          <li>
+          <li class="projects__etc">
             <a href="#" target="_blank"
               ><img src="./images/project.png" alt="project 이미지"
             /></a>
@@ -243,7 +244,7 @@
               <p>프로젝트 설명</p>
             </div>
           </li>
-          <li>
+          <li class="projects__etc">
             <a href="#" target="_blank"
               ><img src="./images/project.png" alt="project 이미지"
             /></a>
@@ -252,7 +253,7 @@
               <p>프로젝트 설명</p>
             </div>
           </li>
-          <li>
+          <li class="projects__etc">
             <a href="#" target="_blank"
               ><img src="./images/project.png" alt="project 이미지"
             /></a>
@@ -261,7 +262,7 @@
               <p>프로젝트 설명</p>
             </div>
           </li>
-          <li>
+          <li class="projects__etc">
             <a href="#" target="_blank"
               ><img src="./images/project.png" alt="project 이미지"
             /></a>
@@ -276,33 +277,40 @@
       <!-- work 끝 -->
       <!-- license 시작 -->
       <section id="license">
-        <h2>자격증</h2>
-        <p>국가 기술 자격증</p>
-        <ul>
+        <h2 class="license__title">자격증 및 이수증</h2>
+        <p class="license__certify">국가 기술 자격증</p>
+        <ul class="licenses">
           <li><img src="./images/Bigdata.png" alt="빅데이터 분석기사" />
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae impedit, ipsam quam iste minus, debitis officia fugit perspiciatis voluptatum quas alias. Ullam sapiente excepturi vitae nemo enim et reprehenderit.<p><a href="#"></a>산업인력공단</p>
+            <div >
+                <p class="licenses__title">빅데이터 분석기사<p><a href="#"></a></p><p>&copy;한국데이터산업진흥원</p>
     
                 </p>
             </div>
         </li>
-          <li><img src="./images/Bigdata.png" alt="빅데이터 분석기사" />
+          <li><img src="./images/SQLD.png" alt="빅데이터 분석기사" />
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae impedit, ipsam quam iste minus, debitis officia fugit perspiciatis voluptatum quas alias. Ullam sapiente excepturi vitae nemo enim et reprehenderit.<p><a href="#"></a>한국데이터산업진흥원</p>
+                <p class="licenses__title">SQLD<p><a href="#"></a></p><p>&copy;한국데이터산업진흥원</p>
     
                 </p>
             </div>
         </li>
           <li><img src="./images/Bigdata.png" alt="정보처리기사" />
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae impedit, ipsam quam iste minus, debitis officia fugit perspiciatis voluptatum quas alias. Ullam sapiente excepturi vitae nemo enim et reprehenderit.<p><a href="#"></a>한국데이터산업진흥원</p>
+                <p class="licenses__title">정보처리기사<p><a href="#"></a></p><p>&copy;한국데이터산업진흥원</p>
     
                 </p>
             </div>
         </li>
-          <li><img src="./images/Bigdata.png" alt="SQLD" />
+          <li><img src="./images/tensorflow.png" alt="SQLD" />
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repudiandae impedit, ipsam quam iste minus, debitis officia fugit perspiciatis voluptatum quas alias. Ullam sapiente excepturi vitae nemo enim et reprehenderit.<p><a href="#"></a>한국데이터산업진흥원</p>
+                <p class="licenses__title">Tensorflow<p><a href="#"></a></p><p>&copy;한국데이터산업진흥원</p>
+    
+                </p>
+            </div>
+        </li>
+          <li><img src="./images/K-MOOC.png" alt="K-MOOC" />
+            <div>
+                <p class="licenses__title">K-MOOC 이수증<p><a href="#"></a></p><p>&copy;K-MOOC</p>
     
                 </p>
             </div>
@@ -325,8 +333,9 @@
         <h2>연락주세요!</h2>
         <p>shguswl826@gmail.com</p>
         <ul>
-            <li><a href="https://github.com/hyeonji826" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://github.com/hyeonji826" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a></li>
+            <li class="github"><a href="https://github.com/hyeonji826" class="github__icon"
+            target="_blank" title="Github"><i class="fa-brands fa-github"></i></a></li>
+            <li class="github"><a href="https://github.com/hyeonji826" class="github__icon" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a></li>
         </ul>
         <p>&copy;Hyeonji - All rights reserved</p>
      </footer>

@@ -17,7 +17,7 @@
   /* colors */
   --color-white: #fff;
   --color-black: #050a13;
-  --color-blue: #03e8f9;
+  --color-blue: #5dc1fa;
   --color-orange: #fd6413;
   --color-gray: #1b1e26;
 
@@ -161,19 +161,22 @@ button:focus {
   justify-content: space-between;
   gap: 1rem;
   margin: 2.5rem 0;
+  color: beige;
+  text-shadow: #fff;
 }
 .skill {
   background-color: var(--color-primary-variant);
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   color: var(--color-text);
   border-radius: 1rem;
   cursor: default;
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
 }
+
 .skill__icon {
   font-size: 4rem;
   margin: 1rem 0;
-  color: var(--color-accent);
+  color: #d7d4f0;
   transition: all 300ms ease;
 }
 .skill:hover .skill__icon {
@@ -183,6 +186,10 @@ button:focus {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: rgb(251, 247, 225);
+}
+.skill_skill {
+  margin-top: 5px;
 }
 .jobs {
   text-align: start; /* 언어에 따라 시작위치를 다르게 설정 */
@@ -195,20 +202,37 @@ button:focus {
 }
 .job__img {
   width: 300px;
-  height: 200px;
+  height: 150px;
 }
 .job__name {
   color: var(--color-primary);
+  margin-left: 10px;
 }
 .job__period {
   color: var(--color-primary);
   font-size: 0.8rem;
+  margin-left: 10px;
 }
+.job__project {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+.job__projects {
+  color: blue;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+.job__projects:hover {
+  color: var(--color-orange)
 
+
+}
 /* skills */
 #skills {
   background-color: var(--color-primary-variant);
   color: var(--color-text);
+  text-shadow: #d7d4f0;
 }
 .tools {
   display: grid;
@@ -218,7 +242,7 @@ button:focus {
   overflow: hidden;
 }
 .tools__title {
-  color: var(--color-accent);
+  color: var(--color-white);
   margin: 1rem 0;
   font-size: 1.2rem;
 }
@@ -247,11 +271,173 @@ button:focus {
   height: 3px;
   background-color: var(--color-accent);
 }
-.tools_tools {
+.tools__tools {
   padding: 1rem;
+  border: 1px solid gray;
+    list-style: square; 
 }
 .tools__etc {
   padding: 1rem;
-  background-color: var(--color-primary);
-  filter: brightness(150%);
+border: 1px solid gray;
+  list-style: square; 
+}
+
+#work {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  padding: 7rem 1rem 5rem;
+  text-align: center;
+}
+
+.work__title {
+  color: var(--color-primary);
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.work__titles {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#works {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.works {
+flex-wrap: nowrap;
+font-weight: bold;
+font-size: 1.3rem;
+color: rgb(255, 255, 255);
+background-color: #1b1e26;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 30px; 
+  list-style: none; 
+  padding: 8px;
+  margin: 30px auto;
+  justify-items: center; 
+}
+
+.projects__etc {
+  background-color: #dbdbdb;
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+#license {
+  justify-content: center;
+  gap: 30px;
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-primary-variant);
+  color: white;
+  height: 600px;
+}
+
+.license__title {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none; 
+  padding: 10px;
+  margin: 0;
+  font-size: 2rem;
+}
+.license__certify {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none; 
+  padding: 20px;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.licenses {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center; 
+}
+
+.licenses__title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: var(--color-accent);
+}
+#contact {
+  justify-content: center;
+  gap: 30px;
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-primary-variant);
+  color: white;
+  height: 600px;
+}
+
+.github__icon {
+font-size: 30px;
+}
+/* footer 명함 스타일 */
+footer#contact {
+  background-color: #f8f8f8;
+  color: #333;
+  text-align: center;
+  padding: 3rem 1rem;
+  font-family: 'Pretendard', sans-serif;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+footer#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+footer#contact p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.Tstory {
+  margin: 0.5rem 0;
+  color: #050a13;
+}
+
+
+footer#contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+footer#contact li a {
+  font-size: 2rem;
+  color: #333232;
+  transition: color 0.3s ease;
+}
+
+footer#contact li a:hover {
+  color: gray;
+}
+
+footer#contact p:last-child {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #888;
 }
