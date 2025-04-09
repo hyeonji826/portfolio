@@ -353,7 +353,6 @@ button:focus {
     transition: all 250ms ease-in;
     transform: translateY(-10px);
 }
-
 .project__metadata:hover {
     opacity: 0.8;
     transform: translateY(0px);
@@ -373,4 +372,63 @@ button:focus {
     width: 100px;
     height: 2px;
     background-color: var(--color-accent);
+}
+
+/* license */
+.licenses {
+    margin: 3rem;
+}
+.license {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.license__img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    box-shadow:0px 3px 8px rgba(0,0,0,0.3);
+}
+
+.license__bubble {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: rgba(0,0,0,0.3) 0px 3px 8px ;
+}
+.license__bubble__name {
+    color: var(--color-accent);
+    font-weight: bold;
+    filter: brightness(70%);
+}
+/* arrow up */
+.arrow-up {
+    background-color: var(--color-primary);
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 3rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100%;
+    text-align: center;
+    box-shadow: 5px 5px 0px 0px var(--color-accent);
+}
+/* footer */
+#contact {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+.contact__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+.contact__link {
+    transition: color 250ms ease-in;
+}
+.contact__link:hover {
+    color: yellow;
 }
