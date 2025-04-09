@@ -77,6 +77,7 @@ button:focus {
 /* header */
 .header {
   background-color: var(--color-primary);
+  opacity: 0.8;
   position: fixed;
   top: 0;
   width: 100%;
@@ -109,7 +110,8 @@ button:focus {
   padding: 8px 16px;
 }
 .header__menu__item:hover {
-  border-bottom: 1px solid var(--color-accent);
+  color: #5dc1fa;
+  opacity: 1;
 }
 .header__menu__item:active {
   border: 1px solid var(--color-accent);
@@ -224,9 +226,7 @@ button:focus {
   margin-left: 10px;
 }
 .job__projects:hover {
-  color: var(--color-orange)
-
-
+  color: var(--color-orange);
 }
 /* skills */
 #skills {
@@ -253,191 +253,200 @@ button:focus {
   background-color: var(--color-primary);
 }
 .bar {
-  display: flex;
+  display: grid;
   flex-direction: column;
   padding: 1rem;
   gap: 0.5rem;
 }
 .bar__metadata {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  justify-content: space-around;
 }
-.bar__bg {
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-primary-variant);
+.bar__metadata i {
+  font-size: 50px;
+  color: rgb(251, 251, 85);
 }
-.bar__value {
-  height: 3px;
-  background-color: var(--color-accent);
+.tool__icon:hover {
+  transform: rotate(5deg) scale(1.5);
+  transition: 450ms ease-in-out;
 }
 .tools__tools {
   padding: 1rem;
   border: 1px solid gray;
-    list-style: square; 
+  list-style: square;
 }
 .tools__etc {
   padding: 1rem;
-border: 1px solid gray;
-  list-style: square; 
+  border: 1px solid gray;
+  list-style: square;
 }
 
 #work {
-  background-color: var(--color-white);
-  color: var(--color-primary);
-  padding: 7rem 1rem 5rem;
-  text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+  }
+  .categories {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem;
+    gap: 1rem;
+  }
+  .category {
+    position: relative;
+    color: var(--color-text);
+    font-size: 1.1rem;
+    padding: 0.5rem 3rem;
+    border-radius: 4px;
+    border: 1px solid var(--color-accent);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .category--selected {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+  }
+  .category__count {
+    opacity: 0;
+    position: absolute;
+    top: -20px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 100%;
+    background-color: var(--color-accent-variant);
+    color: var(--color-text);
+    transition: all 250ms ease-in;
+  }
+  .category--selected .category__count,
+  .category:hover .category__count {
+    opacity: 1;
+    top: 0;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 1rem;
+  }
+
+  .project {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+.project__img {
+    width: 100%;
+}
+.project__metadata {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in;
+    transform: translateY(-10px);
+}
+.project__metadata:hover {
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+/* 
+    after : 요소 뒤에 가상의 요소를 하나 만들어주는 선택자
+    content : "" 아무 내용도 없는 빈 가상 요소를 만듦
+    display : block; -> 가상 요소를 블록 요소처럼 만들어서 크기를 줄 수 있게 함.
+*/
+.project__title:after {
+    content: '';
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0.5rem 0;
+    width: 100px;
+    height: 2px;
+    background-color: var(--color-white);
 }
 
-.work__title {
-  color: var(--color-primary);
-  margin: 1rem 0;
-  font-size: 2rem;
-  font-weight: bold;
-}
-.work__titles {
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-#works {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none; 
-  padding: 0;
-  margin: 0;
-}
-
-.works {
-flex-wrap: nowrap;
-font-weight: bold;
-font-size: 1.3rem;
-color: rgb(255, 255, 255);
-background-color: #1b1e26;
-}
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  gap: 30px; 
-  list-style: none; 
-  padding: 8px;
-  margin: 30px auto;
-  justify-items: center; 
-}
-
-.projects__etc {
-  background-color: #dbdbdb;
-  width: 500px;
-  height: 500px;
-  border-radius: 20px;
-}
-
-#license {
-  justify-content: center;
-  gap: 30px;
-  list-style: none; 
-  padding: 0;
-  margin: 0;
-  background-color: var(--color-primary-variant);
-  color: white;
-  height: 600px;
-}
-
-.license__title {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  list-style: none; 
-  padding: 10px;
-  margin: 0;
-  font-size: 2rem;
-}
-.license__certify {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  list-style: none; 
-  padding: 20px;
-  margin: 0;
-  font-size: 1.2rem;
-}
-
+/* license */
 .licenses {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center; 
-}
-
-.licenses__title {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  color: var(--color-accent);
-}
-#contact {
-  justify-content: center;
-  gap: 30px;
-  list-style: none; 
-  padding: 0;
-  margin: 0;
-  background-color: var(--color-primary-variant);
-  color: white;
-  height: 600px;
-}
-
-.github__icon {
-font-size: 30px;
-}
-/* footer 명함 스타일 */
-footer#contact {
-  background-color: #f8f8f8;
-  color: #333;
-  text-align: center;
-  padding: 3rem 1rem;
-  font-family: 'Pretendard', sans-serif;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-footer#contact h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--color-accent);
-}
-
-footer#contact p {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
-}
-
-.Tstory {
-  margin: 0.5rem 0;
-  color: #050a13;
-}
-
-
-footer#contact ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  flex-wrap: nowrap;
+    margin: 3rem;
+    gap: 30px;
+}
+.license {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
-footer#contact li a {
-  font-size: 2rem;
-  color: #333232;
-  transition: color 0.3s ease;
+.license__img {
+    width: 150px;
+    height: 200px;
+    border-radius: 10%;
+    box-shadow:0px 3px 8px rgba(0,0,0,0.3);
+}
+.license__img:hover {
+    transform: scale(1.5);
+    transition: 450ms ease-in-out;
 }
 
-footer#contact li a:hover {
-  color: gray;
+.license__bubble {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: rgba(0,0,0,0.3) 0px 3px 8px ;
+}
+.license__bubble__name {
+    color: var(--color-accent);
+    font-weight: bold;
+    filter: brightness(70%);
+
 }
 
-footer#contact p:last-child {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #888;
+
+/* arrow up */
+.arrow-up {
+    background-color: var(--color-primary);
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 3px 3px 0px 0px var(--color-accent-variant);
+    opacity: 0.6;
+}
+/* footer */
+#contact {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+.contact__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 3rem;
+}
+.contact__link {
+    transition: color 250ms ease-in;
+}
+.contact__link:hover {
+    color: var(--color-accent);
 }
