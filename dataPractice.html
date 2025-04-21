@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>실시간 미세먼지 조회</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f5f5f5;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #result {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .card {
+      width: 280px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      text-align: left;
+    }
+
+    .good {
+      border-left: 8px solid #2ecc71;
+    }
+
+    .normal {
+      border-left: 8px solid #f1c40f;
+    }
+
+    .bad {
+      border-left: 8px solid #e67e22;
+    }
+
+    .very-bad {
+      border-left: 8px solid #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <h1>📍 서울시 실시간 미세먼지 (PM10)</h1>
+  <button onclick="loadData()">조회하기</button>
+  <div id="result"> </div>
+
+  <script>
+    function getGradeClass(grade) {
+      if (grade === "1") return "good";
+      if (grade === "2") return "normal";
+      if (grade === "3") return "bad";
+      return "very-bad";
+    }
+
+    function getGradeText(grade) {
+      if (grade === "1") return "좋음 😀";
+      if (grade === "2") return "보통 😐";
+      if (grade === "3") return "나쁨 😷";
+      return "매우 나쁨 😱";
+    }
+
+    async function loadData() {
+      const serviceKey = "fQlPfKnYI5jKgbG0KRQHAE1byN6vF46OBF%2FB7t4svBhp%2F3n%2BvsVBakK322v5yH%2BAJbtMYn5d80ICQgzXelbXbcw%3D%3D";
+      const url = `https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=${serviceKey}&returnType=JSON&numOfRows=100&pageNo=1&sidoName=%EC%84%9C%EC%9A%B8&ver=1.0`;
+
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        const items = data.response.body.items;
+
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = "";
+
+        items.forEach((station) => {
+          const card = document.createElement("div");
+          card.className = `card ${getGradeClass(station.pm10Grade)}`;
+          card.innerHTML = `
+            <h3>${station.stationName} 측정소</h3>
+            <p><strong>PM10 등급:</strong> ${getGradeText(station.pm10Grade)}</p>
+            <p><strong>농도:</strong> ${station.pm10Value}㎍/㎥</p>
+            <p><strong>측정 시각:</strong> ${station.dataTime}</p>
+          `;
+          resultDiv.appendChild(card);
+        });
+      } catch (e) {
+        document.getElementById("result").innerText = "데이터 불러오기 실패";
+        console.error(e);
+      }
+    }
+  </script>
+</body>
+</html>
