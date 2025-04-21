@@ -6,7 +6,6 @@
     <title>Hyeonji&#39;s Portfolio</title>
     <meta name="description" content="AI 소프트웨어 개발자" />
     <meta name="author" content="Hyeonji" />
-    <!-- 소셜 미디어 공유용 메타 태그(Open Graph) -->
     <meta property="og:title" content="현지의 포트폴리오" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ko_KR" />
@@ -19,7 +18,6 @@
     content="https://hyeonji826.github.io/images/portfolio2.png"
   />
   
-  
     <link
       rel="shortcut icon"
       href="./images/portfolio(2).ico"
@@ -31,6 +29,7 @@
       src="https://kit.fontawesome.com/133260cff9.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
     <!-- Header 시작 -->
@@ -49,16 +48,19 @@
           <li><a href="#contact"class="header__menu__item">Contact</a></li>
         </ul>
       </nav>
+      <button class="header__toggle"><i class="fa-solid fa-bars"></i></button>
     </header>
     <!--  Header 끝 -->
     <!-- Main 시작 -->
     <main>
       <!-- home 시작-->
       <section id="home">
+        <div class="home__container">
         <img class="home__avatar" src="./images/portfolio2.png" alt="My Logo" />
         <h2 class="home__title">Hello,I'm <br /><strong class="home__title--string">Hyeonji-Noh</strong></h2>
-        <p class="home__description">AI 의료계 소프트웨어 개발자. </p>
+        <p class="home__description">AI 소프트웨어 개발자. </p>
         <a class="home__contact" href="#contact">Contact</a>
+      </div>
       </section>
       <!--  home 끝 -->
       <!-- about 시작-->
@@ -73,23 +75,23 @@
           Quos nisi ipsam, aspernatur tenetur magnam quidem tempore est,
           pariatur ratione, harum voluptatibus ut placeat accusantium. Qui, ab.
         </p>
-        <ul class="skills">
-          <li class="skill">
-            <i class="fa-solid fa-laptop-code skill__icon"></i>
-              <p class="skill__title">Front-end</p>
-              <p class="skill__skill">HTML, CSS, Javascript, Node.Js, React</p>
+        <ul class="majors">
+          <li class="major">
+            <i class="fa-solid fa-laptop-code major"></i>
+              <p class="major__title">Front-end</p>
+              <p class="major__skill">HTML, CSS, Javascript, Node.Js, React</p>
             
           </li>
-          <li class="skill">
-            <i class="fa-solid fa-mobile-screen-button skill__icon" ></i>
-              <p class="skill__title">Mobile</p>
-              <p class="skill__skill">Android, IOS, Kotlin, React-Native</p>
+          <li class="major">
+            <i class="fa-solid fa-mobile-screen-button major__icon" ></i>
+              <p class="major__title">Mobile</p>
+              <p class="major__major">Android, IOS, Kotlin, React-Native</p>
             
           </li>
-          <li class="skill">
-            <i class="fa-solid fa-robot skill__icon"></i>
-              <p class="skill__title">AI</p>
-              <p class="skill__skill">Tensorflow, Python, Pytorch, Numpy</p>
+          <li class="major">
+            <i class="fa-solid fa-robot major__icon"></i>
+              <p class="major__title">AI</p>
+              <p class="major__skill">Tensorflow, Python, Pytorch, Numpy</p>
             
           </li>
         </ul>
@@ -129,9 +131,9 @@
           odio accusantium rerum quae nemo necessitatibus, illo ad? Dolorum,
           minima soluta.
         </p>
-        <div class="tools">
-          <section class="tools__coding">
-            <h3 class="tools__title">언어</h3>
+        <div class="skills">
+          <section class="skills__coding">
+            <h3 class="skills__title">언어</h3>
             <ul>
               <li class="bar">
                 <div class="bar__metadata"><span>HTML</span><span><i class="fa-brands fa-html5  tool__icon"></i></span></div>
@@ -160,8 +162,8 @@
             </ul>
           </section>
 
-          <section class="tools__tools">
-            <h3 class="tools__title">도구</h3>
+          <section class="skill__tools">
+            <h3 class="skills__title">도구</h3>
             <dl>
               <li>Visual Studio Code</li>
               <li>IntelliJ</li>
@@ -171,8 +173,8 @@
             </dl>
           </section>
 
-          <section class="tools__etc">
-            <h3 class="tools__title">기타</h3>
+          <section class="skills__etc">
+            <h3 class="skills__title">기타</h3>
             <dl>
               <li>Git</li>
               <li>SLACK</li>

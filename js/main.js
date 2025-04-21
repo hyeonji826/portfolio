@@ -1,0 +1,37 @@
+const header = document.querySelector(".header");
+
+const headerHeight = header.offsetHeight; // 요소의 총 높이 알 수 있음.
+// console.log(headerHeight); // 70
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > headerHeight) {
+    // console.log("window.scrollY가 headerHeight보다 큽니다.");
+    header.classList.add("header--dark"); // 클래스 추가
+  } else {
+    // console.log("window.scrollY가 headerHeight보다 작습니다.");
+    header.classList.remove("header--dark"); // 클래스 제거
+  }
+}); // 이벤트 적용
+
+const home = document.querySelector(".home__container");
+const homeHeight = home.offsetHeight;
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if ((window, scrollY > homeHeight / 2)) {
+    arrowUp.style.opacity = 1;
+  } else {
+    arrowUp.style.opacity = 0;
+  }
+});
+
+arrowUp.addEventListener("click", (e) => {
+  // a 태그가 적용하고 있어서 변화가 없음
+  e.preventDefault(); // a태그의 기본 동작을 막음
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+const navbarMenu = document.querySelector(".header__menu");
