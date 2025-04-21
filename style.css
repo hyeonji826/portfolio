@@ -350,6 +350,13 @@ button:focus {
   border-radius: 8px;
   overflow: hidden;
 }
+.project {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project--hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 .project__img {
   width: 100%;
 }

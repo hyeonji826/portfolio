@@ -33,3 +33,12 @@ function filterProjects(filter) {
     projectsContainer.classList.remove("anim-out");
   },500);
 }
+
+projects.forEach((project) => {
+  project.addEventListener("mouseenter", () => {
+    project.classList.add("project--hover");
+  });
+  project.addEventListener("mouseleave", () => {
+    project.classList.remove("project--hover");
+  });
+});
