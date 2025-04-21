@@ -30,6 +30,8 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/projects.js"></script>
+    
   </head>
   <body>
     <!-- Header 시작 -->
@@ -191,96 +193,96 @@
     <p class="description">Projects</p>
     <ul class="categories">
       <li>
-        <button class="category category--selected">
+        <button class="category category--selected" data-category="all">
           ALL <span class="category__count">10</span>
         </button>
       </li>
       <li>
-        <button class="category">
+        <button class="category" data-category="front-end">
           Front-end <span class="category__count">3</span>
         </button>
       </li>
       <li>
-        <button class="category">
+        <button class="category" data-category="mobile">
           Mobile <span class="category__count">3</span>
         </button>
       </li>
       <li>
-        <button class="category">
+        <button class="category" data-category="ai">
           AI <span class="category__count">4</span>
         </button>
       </li>
     </ul>
-    <ul class="projects">
-      <li class="project">
+    <ul class="projects" >
+      <li class="project" data-type="front-end">
         <a href="#" target="_blank">
           <img src="./images/project.png" alt="project 이미지" class="project__img"/>
           <div class="project__metadata">
             <h3 class="project__title">Project #1</h3>
-            <p>프로젝트 설명</p>
+            <p>프론트엔드 작업1</p>
           </div>
         </a>
       </li>
-      <li class="project">
+      <li class="project" data-type="front-end">
         <a href="#" target="_blank">
           <img src="./images/project.png" alt="project 이미지" class="project__img"/>
           <div class="project__metadata">
             <h3 class="project__title">Project #2</h3>
-            <p>프로젝트 설명</p>
+            <p>프론트엔드 작업2</p>
           </div>
         </a>
       </li>
-      <li class="project">
+      <li class="project" data-type="front-end">
         <a href="#" target="_blank">
           <img src="./images/project.png" alt="project 이미지" class="project__img"/>
           <div class="project__metadata">
             <h3 class="project__title">Project #3</h3>
-            <p>프로젝트 설명</p>
+            <p>프론트엔드 작업3</p>
           </div>
         </a>
       </li>
-      <li class="project">
+      <li class="project" data-type="mobile">
         <a href="#" target="_blank">
           <img src="./images/project.png" alt="project 이미지" class="project__img"/>
           <div class="project__metadata">
             <h3 class="project__title">Project #4</h3>
-            <p>프로젝트 설명</p>
+            <p>모바일 작업1</p>
           </div>
         </a>
       </li>
-      <li class="project">
+      <li class="project" data-type="mobile">
         <a href="#" target="_blank">
           <img src="./images/project.png" alt="project 이미지" class="project__img"/>
           <div class="project__metadata">
             <h3 class="project__title">Project #5</h3>
-            <p>프로젝트 설명</p>
+            <p>모바일 작업2</p>
           </div>
         </a>
       </li>
-      <li class="project">
+      <li class="project" data-type="mobile">
         <a href="#" target="_blank">
           <img src="./images/project.png" alt="project 이미지" class="project__img"/>
           <div class="project__metadata">
             <h3 class="project__title">Project #6</h3>
-            <p>프로젝트 설명</p>
+            <p>모바일 작업3</p>
           </div>
         </a>
       </li>
-      <li class="project">
+      <li class="project" data-type="ai">
         <a href="#" target="_blank">
           <img src="./images/project.png" alt="project 이미지" class="project__img"/>
           <div class="project__metadata">
             <h3 class="project__title">Project #7</h3>
-            <p>프로젝트 설명</p>
+            <p>AI 작업1</p>
           </div>
         </a>
       </li>
-      <li class="project">
+      <li class="project" data-type="ai">
         <a href="#" target="_blank">
           <img src="./images/project.png" alt="project 이미지" class="project__img"/>
           <div class="project__metadata">
             <h3 class="project__title">Project #8</h3>
-            <p>프로젝트 설명</p>
+            <p>AI 작업2</p>
           </div>
         </a>
       </li>
