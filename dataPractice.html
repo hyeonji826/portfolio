@@ -65,7 +65,7 @@
   </style>
 </head>
 <body>
-  <h1>📍 서울시 실시간 미세먼지 (PM10)</h1>
+  <h1>서울시 실시간 미세먼지 (PM10)</h1>
   <button onclick="loadData()">조회하기</button>
   <div id="result"> </div>
 
@@ -86,7 +86,7 @@
 
     async function loadData() {
       const serviceKey = "fQlPfKnYI5jKgbG0KRQHAE1byN6vF46OBF%2FB7t4svBhp%2F3n%2BvsVBakK322v5yH%2BAJbtMYn5d80ICQgzXelbXbcw%3D%3D";
-      const url = `https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=${serviceKey}&returnType=JSON&numOfRows=100&pageNo=1&sidoName=%EC%84%9C%EC%9A%B8&ver=1.0`;
+      const url = "https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=fQlPfKnYI5jKgbG0KRQHAE1byN6vF46OBF%2FB7t4svBhp%2F3n%2BvsVBakK322v5yH%2BAJbtMYn5d80ICQgzXelbXbcw%3D%3D&returnType=JSON&numOfRows=100&pageNo=1&sidoName=%EC%84%9C%EC%9A%B8&ver=1.0";
 
       try {
         const res = await fetch(url);
